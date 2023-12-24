@@ -21,9 +21,9 @@
 # следующем слайде
 
 
-orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
+orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (40, 3)]
 def find_farthest_orbit(orb):
-    orb = list(filter(lambda x: x[0] - x[1] != 0, orb))
+    orb = list(filter(lambda x: x[0] - x[1] != 0, orb))     # filter - оставляет массив, который подходит под прописанные услувия
     for i in orb:
         if i[0] * i[1] == max(list(map(lambda x: x[0] * x[1], orb))):
             return i
